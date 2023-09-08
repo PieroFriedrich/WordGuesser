@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(lightblue 0%, white 100%);
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    border-bottom: 2px solid #333;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.brand {
+    font-size: 30px;
+}
+
+.scoreboard {
+    max-width: 295px;
+    width: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 5px;
+}
+
+.scoreboard-letter {
+    height: 45px;
+    width: 45px;
+    font-size: 30px;
+    text-transform: uppercase;
+    border: 3px solid #000000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.correct {
+    background-color: green;
+    color: white;
+}
+
+.close {
+    background-color: goldenrod;
+    color: white;
+}
+
+.wrong {
+    background-color: crimson;
+    color: white;
+}
+
+.invalid {
+    animation: flash 1s;
+}
+
+@keyframes flash {
+    5% {
+        border-color: crimson;
+    }
+
+    100% {
+        border-color: #ccc;
+    }
+}
+
+.spiral {
+    font-size: 40px;
+    text-align: center;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.info-bar {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show {
+    visibility: visible;
+}
+
+@keyframes rainbow {
+    100%,
+    0% {
+        color: red;
+    }
+    10% {
+        color: orangered;
+    }
+    20% {
+        color: orange;
+    }
+    30% {
+        color: yellow;
+    }
+    40% {
+        color: yellowgreen;
+    }
+    50% {
+        color: green;
+    }
+    60% {
+        color: lightblue;
+    }
+    70% {
+        color: blue;
+    }
+    80% {
+        color: blueviolet;
+    }
+    90% {
+        color: violet;
+    }
+}
+
+.winner {
+    animation: rainbow 4s infinite linear;
+}
